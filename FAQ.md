@@ -13,6 +13,7 @@ If something works with C# should works exactly the same for F#.
     - a new target framework?
     - what dependencies version of libraries/tools?
     - how can i check version resolved?
+    - some code need to be changed for .net core..
     - Can i create a single nuget package with multiple framework versions inside (.NET 4.6, .NET Core)?
         - But i already create the nuget package in my build, i dont want to use project.json for every framework
             - i need to merge nupkg manually?
@@ -132,6 +133,34 @@ As per `preview1`:
 ### how can i check version resolved?
 
 do `dotnet restore` and open `project.lock.json`, search for package name.
+
+
+### some code need to be changed for .net core.. two version!
+
+If some code need to be changed, it's possible to maintain two version of same code under '#if` defines.
+When building, an upper case compiler define of TFM is passed to compiler.
+
+so if 
+
+```json
+    "frameworks": {
+        "netstandard1.5": { 
+```
+
+a compiler directive `NETSTANDARD1_5` (the `.` becomes `_`) is passed to compiler
+
+**NOTE** the compiler is F# 4.0, so it's possibile to use `#if !DEF`, `#if A || B` and `#if A && B`
+
+like
+
+```fsharp
+#if NETSTANDARD1_5
+   let a = typeof<Program>.GetTypeInfo().Assembly.Name
+#else
+   let a = typeof<Program>.GetType().Assembly.Name
+#endif
+```
+
 
 ### Can i create a single nuget package with multiple framework versions inside (.NET 4.6, .NET Core)?
 
