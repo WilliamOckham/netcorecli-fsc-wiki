@@ -44,7 +44,7 @@ It's a not RTM, if you see bugs, open an issue in:
 
 ## Preview? RC?
 
-When .NET Core was in beta, the tooling (dotnet/cli, project.json, xproj) and the .NET Core (coreclr, corefx, bcl) was bundled together using same version (`beta`).
+When .NET Core was in beta, the tooling (dotnet/cli, project.json, xproj) and the .NET Core (coreclr, corefx, bcl) was bundled together using same version (`beta` and after `rc2`).
 
 The dotnet team [split the two parts](https://blogs.msdn.microsoft.com/dotnet/2016/05/16/announcing-net-core-rc2/), the `.NET Core` (more ready for production, RC quality => `RC2`) from tooling (renamed from `.NET CLI` to `.NET Core SDK`, now in `preview1`)
 
@@ -87,7 +87,7 @@ procedure usually is
 8. do `dotnet build` and fix errors
 9. do `dotnet pack` to create the package
 
-Check some alredy converted projects, like github.com/SuaveIO/suave 
+Check some alredy converted projects, like https://github.com/SuaveIO/suave 
 
 ### a new target framework?
 
@@ -105,7 +105,7 @@ TFM mean target framework moniker, the short name ( ref [nugets targetframeworks
 So, simplified:
 
 - a library should target `netstandard1.5`
-- a console app should target `netcore1.0`
+- a console app should target `netcoreapp1.0`
 
 ### what dependencies version of libraries/tools?
 
