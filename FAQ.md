@@ -13,7 +13,7 @@ If something works with C# should works exactly the same for F#.
     - a new target framework?
     - what dependencies version of libraries/tools?
     - how can i check version resolved?
-    - some code need to be changed for .net core..
+    - some code need to be changed for .net core.. two version!
     - Can i create a single nuget package with multiple framework versions inside (.NET 4.6, .NET Core)?
         - But i already create the nuget package in my build, i dont want to use project.json for every framework
             - i need to merge nupkg manually?
