@@ -1,5 +1,3 @@
-# FAQ
-
 Some FAQ, info about development for .NET Core. Some apply only to F#, others to all languages.
 
 If something works with C# should works exactly the same for F#.
