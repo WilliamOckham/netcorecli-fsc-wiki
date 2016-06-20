@@ -9,4 +9,5 @@ Current working (stable) version:
 | .NET Core SDK | [preview1](http://dot.net) | `1.0.0-preview1-002702` |
 
 The `preview1` works, but see [[.NET-Core-SDK-preview1]] for more info about issues
+
 Supported OS: same as .NET Core SDK (win/osx/ubuntu/docker), see [download page](https://www.microsoft.com/net/download#core)
